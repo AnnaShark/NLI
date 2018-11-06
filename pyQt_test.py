@@ -11,9 +11,13 @@ class VisualSelector( QDialog):
     def __init__(self, parent=None):
         super(VisualSelector, self).__init__(parent)
         self.speechStarted = 0
+        
+        self.draw_radio_buttons_selectParser()
         self.drawRadioButtons()
         self.drawSpeechButton()
+        
         mainLayout = QGridLayout()
+        mainLayout.addWidget(self.speech_2_text_selector)
         mainLayout.addWidget(self.text2SpeechSelector)
         mainLayout.addWidget(self.speechManager)
          
@@ -37,6 +41,19 @@ class VisualSelector( QDialog):
         layout.addWidget(activateButton)
         layout.addWidget(QPushButton('END'))
         self.speechManager.setLayout(layout)
+
+    def draw_radio_buttons_selectParser(self):
+        self.speech_2_text_selector = QGroupBox("Select speech Synthetizer")
+        radioButton_mary = QRadioButton("MaryTTS")
+        radioButton_google = QRadioButton("Google API")
+        radioButton_Festival = QRadioButton("Festival")
+        radioButton_google.setChecked(True)
+        layout = QVBoxLayout()
+        layout.addWidget(radioButton_mary)        
+        layout.addWidget(radioButton_google)
+        layout.addWidget(radioButton_Festival)
+        layout.addStretch(1)
+        self.speech_2_text_selector.setLayout(layout)
         
     def drawRadioButtons(self):
         self.text2SpeechSelector = QGroupBox("Select speech Synthetizer")
