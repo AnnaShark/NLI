@@ -3,8 +3,9 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from speech2Text import SpeechToText
+from text2speech import Text2Speach as t2s
 import _thread
-
+import json
 
 
 class VisualSelector( QDialog):    
@@ -49,7 +50,7 @@ class VisualSelector( QDialog):
         radioButton_Festival = QRadioButton("Festival")
         radioButton_google.setChecked(True)
         layout = QVBoxLayout()
-        layout.addWidget(radioButton_mary)        
+        layout.addWidget(radioButton_mary)          
         layout.addWidget(radioButton_google)
         layout.addWidget(radioButton_Festival)
         layout.addStretch(1)
@@ -73,19 +74,29 @@ class VisualSelector( QDialog):
         self.text2SpeechSelector.setLayout(layout)
 
 def speech_thread (recognizer,view):
+    
     while recognizer.iterate == 1:
         if view.speechStarted == 1:
             print("is iterating: ", recognizer.iterate)
             recognizer.getAudio()
             print("++++++++++++++++++++++")
+            
+def dataInitialization():
+        with open('server_questions.json') as f:
+            return json.load(f)
 def main():
+    data = dataInitialization()
+    dataInitialization()
     QApplication.setStyle(QStyleFactory.create("Fusion"))
     app = QApplication(sys.argv)
     view = VisualSelector()
     recognizer = SpeechToText()
     recognizer.iterate = 1
-    print("started")
+    
     view.show()
+    
+    t2s.speak(data['welcome'][0])
+    print("started")
     _thread.start_new_thread(speech_thread,( recognizer, view,))
     sys.exit(app.exec_())
     
@@ -93,6 +104,7 @@ def main():
         
 if __name__ == '__main__':
     import sys
+    
     main()
    
         
