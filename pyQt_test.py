@@ -6,72 +6,39 @@ from speech2Text import SpeechToText
 from text2speech import Text2Speach as t2s
 import _thread
 import json
-
+import random
 
 class VisualSelector( QDialog):    
     def __init__(self, parent=None):
         super(VisualSelector, self).__init__(parent)
         self.speechStarted = 0
-        
-        self.draw_radio_buttons_selectParser()
-        self.drawRadioButtons()
         self.drawSpeechButton()
         
         mainLayout = QGridLayout()
-        mainLayout.addWidget(self.speech_2_text_selector)
-        mainLayout.addWidget(self.text2SpeechSelector)
         mainLayout.addWidget(self.speechManager)
          
         self.setLayout(mainLayout)
         self.setWindowTitle("SPEECH ")
-    def activate_speech(self):
-        if self.speechStarted == 1:
-            self.speechStarted = 0
-            print(self.speechStarted)
-            
-        else:
-            self.speechStarted = 1
-            print(self.speechStarted)
+    def activate_speech(self):        
+        self.speechStarted = 1
+        print(self.speechStarted)
+    def deActivate_speech(self):        
+        self.speechStarted = 0
+        print(self.speechStarted)
              
     def drawSpeechButton(self):
         self.speechManager = QGroupBox();
         activateButton = QPushButton('START')
         activateButton.clicked.connect(self.activate_speech)
+        deActivateButton = QPushButton('END')
+        deActivateButton.clicked.connect(self.deActivate_speech)
         layout = QVBoxLayout()
         layout.addWidget(QLabel("initiate or end the speech recognition"))
         layout.addWidget(activateButton)
-        layout.addWidget(QPushButton('END'))
+        layout.addWidget(deActivateButton)
         self.speechManager.setLayout(layout)
 
-    def draw_radio_buttons_selectParser(self):
-        self.speech_2_text_selector = QGroupBox("Select speech Synthetizer")
-        radioButton_mary = QRadioButton("MaryTTS")
-        radioButton_google = QRadioButton("Google API")
-        radioButton_Festival = QRadioButton("Festival")
-        radioButton_google.setChecked(True)
-        layout = QVBoxLayout()
-        layout.addWidget(radioButton_mary)          
-        layout.addWidget(radioButton_google)
-        layout.addWidget(radioButton_Festival)
-        layout.addStretch(1)
-        self.speech_2_text_selector.setLayout(layout)
-        
-    def drawRadioButtons(self):
-        self.text2SpeechSelector = QGroupBox("Select speech Synthetizer")
-        pic = QLabel(self)
-        pic.setPixmap(QPixmap("icon.jpg"))
-        radioButton1 = QRadioButton("Speech Synth. 1")
-        radioButton2 = QRadioButton("Speech Synth. 2")
-        radioButton3 = QRadioButton("Speech Synth. 3")
-        radioButton1.setChecked(True)        
-
-        layout = QVBoxLayout()
-        layout.addWidget(pic)
-        layout.addWidget(radioButton1)
-        layout.addWidget(radioButton2)
-        layout.addWidget(radioButton3)
-        layout.addStretch(1)
-        self.text2SpeechSelector.setLayout(layout)
+    
 
 def speech_thread (recognizer,view):
     
@@ -80,10 +47,16 @@ def speech_thread (recognizer,view):
             print("is iterating: ", recognizer.iterate)
             recognizer.getAudio()
             print("++++++++++++++++++++++")
+        else:
+            print("stopped")
             
 def dataInitialization():
         with open('server_questions.json') as f:
             return json.load(f)
+
+def getAudioTosay(data,typeOfMessage):
+    return data[typeOfMessage][random.randint(0,len(data[typeOfMessage])-1)]
+                               
 def main():
     data = dataInitialization()
     dataInitialization()
@@ -92,10 +65,10 @@ def main():
     view = VisualSelector()
     recognizer = SpeechToText()
     recognizer.iterate = 1
+    currentState = "noInitialized"
     
-    view.show()
-    
-    t2s.speak(data['welcome'][0])
+    view.show()    
+    t2s.speak(getAudioTosay(data,typeOfMessage='welcome'))
     print("started")
     _thread.start_new_thread(speech_thread,( recognizer, view,))
     sys.exit(app.exec_())
@@ -103,8 +76,7 @@ def main():
     
         
 if __name__ == '__main__':
-    import sys
-    
+    import sys    
     main()
    
         
