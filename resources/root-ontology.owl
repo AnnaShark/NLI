@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:User="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User&apos;"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#experinces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#experinces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#gaveRatingToTech -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#gaveRatingToTech"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#hasLevelOfAnxiety -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#hasLevelOfAnxiety">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#hasTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AvailableTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#isInside -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#isInside">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#wantsToImplement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#wantsToImplement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#DateOfLevelOfAnxiety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#DateOfLevelOfAnxiety">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#DateOfPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#DateOfPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#DateofAvailableTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#DateofAvailableTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AvailableTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#TechImplementationSteps -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#TechImplementationSteps">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#TechSupportMat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#TechSupportMat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#TechniqueName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#TechniqueName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1Rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1Rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#avarageTimeToRealise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#avarageTimeToRealise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#levelOfAnxiety -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#levelOfAnxiety">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#nameOfPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#nameOfPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User&apos;sAmountOfTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User&apos;sAmountOfTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AvailableTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel1to3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel1to3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RelevantAnxietyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel4to6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel4to6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RelevantAnxietyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel7-10 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel7-10">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RelevantAnxietyLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AppropriateInPublicPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AppropriateInPublicPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AvailableTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AvailableTime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Characteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Characteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Interactive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Interactive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Interactivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Interactivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Interactivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Mental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Mental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PhysicalInvolvement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NonInteractive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NonInteractive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Interactivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NonPublic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NonPublic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AppropriateInPublicPlace"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#isInside"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NotPublicPlace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NotPublicPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NotPublicPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Physical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Physical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PhysicalInvolvement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PhysicalInvolvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PhysicalInvolvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Public -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Public">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AppropriateInPublicPlace"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#isInside"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PublicPlace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PublicPlace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PublicPlace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RatingHistory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RatingHistory"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RelevantAnxietyLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#RelevantAnxietyLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Technique"/>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#BellyBreathing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#BellyBreathing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AnxietyLevel4to6"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#NonInteractive"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Physical"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#Public"/>
+        <TechImplementationSteps>1. Place one hand just above your belt line, and the other on your chest, right over the breastbone. You can use your hands as a simple biofeedback device. Your hands will tell you what part of your body, and what muscles, you are using to breathe.
+
+2. Open your mouth and gently sigh, as if someone had just told you something really annoying. As you do, let your shoulders and the muscles of your upper body relax, down, with the exhale. The point of the sigh is not to completely empty your lungs. It&apos;s just to relax the muscles of your upper body.
+
+3. Close your mouth and pause for a few seconds.
+
+4. Keep your mouth closed and inhale slowly through your nose by pushing your stomach out. The movement of your stomach precedes the inhalation by just the tiniest fraction of a second, because it&apos;s this motion which is pulling the air in. When you&apos;ve inhaled as much air as you can comfortably (without throwing your upper body into it), just stop. You&apos;re finished with that inhale.
+
+5. Pause. How long? You decide. I&apos;m not going to give you a specific count, because everybody counts at a different rate, and everybody has different size lungs. Pause briefly for whatever time feels comfortable. However, be aware that when you breathe this way, you are taking larger breaths than you&apos;re used to. For this reason, it&apos;s necessary to breathe more slowly than you&apos;re used to. If you breathe at the same rate you use with your small, shallow breaths, you will probably feel a little lightheaded from over breathing, and it might make you yawn. Neither is harmful. They&apos;re just signals to slow down. Follow them!
+
+6. Open your mouth. Exhale through your mouth by pulling your belly in.
+
+7. Pause.
+
+8. Continue with Steps 4-7.</TechImplementationSteps>
+        <TechSupportMat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?time_continue=123&amp;v=eRIV2R3jzaQ</TechSupportMat>
+        <TechniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belly breathing excercise</TechniqueName>
+        <User1Rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</User1Rating>
+        <avarageTimeToRealise rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</avarageTimeToRealise>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User"/>
+        <gaveRatingToTech rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#BellyBreathing"/>
+        <hasLevelOfAnxiety rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1LevelofAnxiety"/>
+        <hasTime rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1AvailableTime"/>
+        <isInside rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1Env"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1AvailableTime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1AvailableTime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#AvailableTime"/>
+        <User:sAmountOfTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</User:sAmountOfTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1Env -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1Env">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#PublicPlace"/>
+        <DateOfPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-10-26T21:32:52</DateOfPlace>
+        <nameOfPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></nameOfPlace>
+        <nameOfPlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bus</nameOfPlace>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1LevelofAnxiety -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#User1LevelofAnxiety">
+        <rdf:type rdf:resource="http://www.semanticweb.org/anna.sharkova/ontologies/2018/9/untitled-ontology-2#LevelofAnxiety"/>
+        <DateOfLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-26T21:32:52</DateOfLevelOfAnxiety>
+        <levelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</levelOfAnxiety>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+
