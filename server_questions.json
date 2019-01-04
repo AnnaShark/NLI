@@ -1,0 +1,23 @@
+{
+    "welcome": [
+        "Hello! I am here to help you!",
+        "Hi!, It is nice to see you!, I am back to help you"
+    ],
+    "askHowAreYou":[
+      "How are you?",
+      "How can I help you?"
+    ],
+    "HasUndestood": [
+      "Ok! I se... let me think for a few...",
+      "I got it!"
+    ],
+    "HasntUndestood": [
+      "Can you repeat please?",
+      "Maybe my ears are dirty, could you repeat that please?"
+    ],
+    "GoodBye":[
+      "I am happy to help you, se you soon!",
+      "We had finished, If you ever need me, I will be glad to help you, bye bye!"
+    ]
+
+}
