@@ -2,22 +2,28 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+
+from SPARQLWrapper import SPARQLWrapper,JSON
+import rdflib
 from owlready2 import *
 
 from speech2Text import SpeechToText
 from text2speech import Text2Speach as t2s
 from statemachine import StateMachine, State
-
+from random import *
 import time
 import _thread
 import json
 import random
+
+
 
 class DialogManager(StateMachine):
     #states
     welcome = State('Welcome',initial = True)
     basicData = State('BasicData')
     randomSolution = State('RandomSolution')
+    randomSolutionSolving = State('RandomSolutionSolving')
     askingFor = State('AskingFor')
     listenForSolution = State('ListenForSolution')
     listening = State('Listening')
@@ -32,15 +38,35 @@ class DialogManager(StateMachine):
     
     transFromRandomSolutionToRandomSolution = randomSolution.to(randomSolution)
     transFromRandomSolutionToBasicData = randomSolution.to(basicData)
+    transFromRandomSolutionToRandomSolutionSolving = randomSolution.to(randomSolutionSolving)
 
+    transFromRandomSolutionSolvingToRandomSolutionSolving = randomSolutionSolving.to(randomSolutionSolving)
+    transFromRandomSolutionSolvingToEnd = randomSolutionSolving.to(end)
+    
     transFromListenSolutionToListenSolution = listenForSolution.to(listenForSolution)
     transFromLitenSolutionToBasicData = listenForSolution.to(basicData)
     transFromListenSolutionToListening = listenForSolution.to(listening)
+
+    transFromListeningToListening = listening.to(listening)
+    transFromListeningToEnd = listening.to(end)
 
     def on_enter_basicData(self):
         speak(typeOfMessage='askHowAreYou') 
     def on_enter_randomSolution(self):        
         speak(typeOfMessage='randomSolutionCheck')
+
+    def on_enter_randomSolutionSolving(self):
+        onto_searched = onto.search(techniqueName = "*")
+        randomSolution = randint(0,len(onto_searched))
+        print(randomSolution)
+        randomSolutionFound =onto_searched[randomSolution] 
+        print(randomSolutionFound.techniqueName)
+                
+        speakResult(randomSolutionFound.techniqueName[0],randomSolutionFound.techniqueName[0])
+        speakResult(randomSolutionFound.techniqueScript[0],randomSolutionFound.techniqueName[0]+"description")
+
+        speakResult("Was it helpful?", "helpful")
+        
     def on_enter_listenForSolution(self):
         speak(typeOfMessage ='listenForProposalCheck')
 
@@ -54,9 +80,7 @@ def dataInitialization():
 dm = DialogManager()
 data = dataInitialization()
 recognizer = SpeechToText()
-onto = get_ontology("file://resources/root-ontology.owl").load()
-print(onto.search(hasTime ="*"))
-    
+onto = get_ontology("resources/root-ontology.owl").load()
 
 def speech_thread (recognizer):    
     while recognizer.iterate == 1:        
@@ -69,6 +93,10 @@ def getAudioTosay(typeOfMessage):
 
 def speak(typeOfMessage):
     t2s.speak(sentence=getAudioTosay(typeOfMessage=typeOfMessage),fileName=str(time.time())+typeOfMessage)
+
+def speakResult(msg,name):
+    t2s.speak(msg,name)
+
     
 def main():     
     recognizer.iterate = 0
@@ -139,10 +167,39 @@ def main():
                     speak(typeOfMessage='HasntUndestood')
             if   random_agree == 1:
                 speak(typeOfMessage='HasUndestood')
+                
+                dm.transFromRandomSolutionToRandomSolutionSolving()
+                random_finished = 0
+                while random_finished == 0:
+                    listened = recognizer.getAudio()
+                    for token in listened:
+                        print(token.text, token.pos_, token.dep_)
+                        if token.text == "yes":
+                            print("AGREE")
+                            random_finished =1
+                            dm.transFromRandomSolutionSolvingToEnd()
+                                    
+                        elif token.text == "no":
+                            print ( "DISAGREE")
+                            random_finished = 2
+                                    
+                        elif token.text == "another":
+                            print( "TRY ANOTHER")
+                            random_finished = -1
+                            dm.transFromRandomSolutionSolvingToRandomSolutionSolving()
+                            
+                    if random_finished == 0  :
+                        print( "DIDN'T UNDESTOOD")
+                        speak(typeOfMessage='HasntUndestood')
+                            
+            if random_agree == 0  :
+                print( "DIDN'T UNDESTOOD")
+                speak(typeOfMessage='HasntUndestood')
             elif random_agree == 2:
                 dm.transFromRandomSolutionToBasicData()
             elif random_agree == -1:
                 dm.transFromRandomSolutionToRandomSolution()
+                
         if dm.current_state == dm.listenForSolution:
             listen_agree = 0
             while listen_agree == 0:
@@ -169,6 +226,34 @@ def main():
                 dm.transFromLitenSolutionToBasicData()
             elif listen_agree == -1:
                 dm.transFromListenSolutionToListenSolution()
+        if dm.current_state == dm.listening:
+            proposal_told = 0
+            while proposal_told == 0:
+                listened = recognizer.getAudio()
+                print(listened)
+                onto_searched = onto.search(techniqueName = "*")
+                print(onto_searched)
+                for i in range(len(onto_searched)):
+                    print(onto_searched[i].techniqueName[0].lower())
+                    if onto_searched[i].techniqueName[0].lower() == listened:                  
+                        speakResult(onto_searched[i].techniqueName[0],onto_searched[i].techniqueName[0])
+                        speakResult(onto_searched[i].techniqueScript[0],onto_searched[i].techniqueName[0]+"description")
+                        proposal_told = 1
+                        break;
+                    
+                if len(listened) > 0:
+                    print(listened)
+                if listen_agree == 0  :
+                    print( "LISTEN_DIDN'T UNDESTOOD")
+                    speak(typeOfMessage='HasntUndestood')
+                    
+            if   proposal_told == 1:
+                dm.transFromListeningToEnd()
+            elif proposal_told == 2:
+                dm.transFromLitenSolutionToBasicData()
+            elif proposal_told == -1:
+                dm.transFromListenSolutionToListenSolution()
+            
     speak(typeOfMessage = "GoodBye")
     
     
