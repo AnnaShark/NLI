@@ -4,11 +4,27 @@
         "Hi!, It is nice to see you!, I am back to help you"
     ],
     "askHowAreYou":[
-      "How are you?",
-      "How can I help you?"
+      "If you want I can ask you few questions to find the best solution for you. Otherwise I can find a random solution to try or finally, tell me the name of a technique that you want to try."
+    ],
+    "randomSolutionCheck":[
+      "Do you want a random solution?",
+      "Did you said to go for a random solution?"
+    ],
+    "askForQuestionsCheck":[
+      "Then can I ask you a few questions?",
+      "Do you let me ask you a bounch of things?"
+    ],
+    "listenForProposalCheck":[
+      "Did you said that you want to tell me a method?",
+      "Do you want to propose a method to me?"
+    ],
+    "listening":[
+      "I am listening...",
+      "Okey, I am waiting for your proposal",
+      "tell me the method that you want "
     ],
     "HasUndestood": [
-      "Ok! I se... let me think for a few...",
+      "Ok! I see... let me think for a few...",
       "I got it!"
     ],
     "HasntUndestood": [
@@ -18,6 +34,18 @@
     "GoodBye":[
       "I am happy to help you, se you soon!",
       "We had finished, If you ever need me, I will be glad to help you, bye bye!"
+    ],
+    "completed":[
+      "Can I do something else?"
+    ],
+    "askingFor":[
+      "Are you in the public way? "
+    ],
+    "askingForSecond":[
+      "Can you actually move ?"
+    ],
+    "askingForSolving":[
+      "These are my proposals"
     ]
 
 }

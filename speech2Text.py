@@ -20,13 +20,13 @@ class SpeechToText():
             print("Google Speech Recognition thinks you said " + self.r.recognize_google(self.audio))
             canProcess = 1
             doc = self.nlp(self.r.recognize_google(self.audio))
-            for token in doc:
-                print(token.text, token.pos_, token.dep_)
+            return doc
         except sr.UnknownValueError:
             print("Google Speech Recognition could not understand audio")
-            canProcess = 0
+            return {}
         except sr.RequestError as e:
-            canProcess = 0
+            return {}
+            
             print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
    
@@ -35,7 +35,7 @@ class SpeechToText():
             print("Say something!")
             self.audio = self.r.listen(source)
             print("listening...")
-        self.speech2Txt()
+        return self.speech2Txt()
 
 
     
