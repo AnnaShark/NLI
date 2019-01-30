@@ -34,6 +34,18 @@
     "GoodBye":[
       "I am happy to help you, se you soon!",
       "We had finished, If you ever need me, I will be glad to help you, bye bye!"
+    ],
+    "completed":[
+      "Can I do something else?"
+    ],
+    "askingFor":[
+      "Are you in the public way? "
+    ],
+    "askingForSecond":[
+      "Can you actually move ?"
+    ],
+    "askingForSolving":[
+      "These are my proposals"
     ]
 
 }

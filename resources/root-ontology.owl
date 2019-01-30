@@ -8,10 +8,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:untitled-ontology-4="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -19,7 +19,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#gaveRating -->
@@ -28,7 +28,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#User"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Rating"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#hasRating -->
@@ -37,7 +37,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Rating"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#initiated -->
@@ -46,10 +46,10 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#User"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -57,7 +57,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://webprotege.stanford.edu/R7XrrESJW3XYPHwC0H8QcmC -->
@@ -65,7 +65,7 @@
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R7XrrESJW3XYPHwC0H8QcmC">
         <rdfs:label>su</rdfs:label>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#availableTime -->
@@ -74,7 +74,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#averageDuration -->
@@ -83,7 +83,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#interactive -->
@@ -92,7 +92,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#physicalActivityInvolved -->
@@ -101,7 +101,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#preferenceToInteractiveActivity -->
@@ -110,7 +110,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#preferenceToPhysicalActivity -->
@@ -119,7 +119,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#ratingValue -->
@@ -128,7 +128,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Rating"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#sessionDateTime -->
@@ -137,7 +137,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#sessionLevelOfAnxiety -->
@@ -146,7 +146,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#sessionPublicEnvironment -->
@@ -155,7 +155,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#suitableForPublicEnv -->
@@ -164,7 +164,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#techiqueLevelOfAnxiety -->
@@ -173,7 +173,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#techniqueName -->
@@ -182,7 +182,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#techniqueScript -->
@@ -191,7 +191,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#userName -->
@@ -200,10 +200,10 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#User"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -211,34 +211,34 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Rating -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Rating"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Session"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Technique"/>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#User -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#User"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -246,7 +246,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://webprotege.stanford.edu/R87D6cgn3gOrCLQdJXKJ7Rz -->
@@ -258,11 +258,11 @@
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest Sounds</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forest sounds</techniqueName>
         <techniqueScript xml:lang="pl">You can listen to some relaxing nature sounds which will take you out of your environment and help you feel less anxious.</techniqueScript>
         <rdfs:label>T3</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/R8n26pVMUcRlCKAtpJLsf4u -->
@@ -274,7 +274,7 @@
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body relaxation</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body relaxation</techniqueName>
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Let’s begin by becoming aware of your breathing. Take a deep breath in through the nose; allow your stomach to expand as you breathe in. Hold the breath for a few seconds and then breathe out your mouth slowly, allowing your body to completely relax on the out breath.
 
 I want you to consciously slow your breathing down with each breath you take. Breathe in through your nose; hold it for a few seconds, and then exhale out your mouth. With each breath you take your body is becoming relaxed and your mind is becoming more clear and focused. Breathing in through your nose, holding it for a few seconds, and then exhaling out your mouth.
@@ -310,7 +310,7 @@ Your body is feeling very relaxed now. Your mind is clear and focused. Your emot
 It is now time to leave this meditation. When you feel ready, gently bring your awareness back to your body, and to the room you are in. Give your fingers and toes a wiggle and gently open your eyes – coming back to waking consciousness.</techniqueScript>
         <rdfs:label>T7</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/R9HlpZFfhb3CsL2fdmSP2cB -->
@@ -326,7 +326,7 @@ It is now time to leave this meditation. When you feel ready, gently bring your 
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You can listen to some relaxing classical music which will take you out of your environment and help you feel less anxious.</techniqueScript>
         <rdfs:label>T6</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/R9Je0tGRRFOGziam9GhbK8S -->
@@ -338,19 +338,19 @@ It is now time to leave this meditation. When you feel ready, gently bring your 
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Focus Object</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">focus object</techniqueName>
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The technique of using a focus object can help bring us into the moment and distract us from our own negative thoughts, it is a mindfulness mediation technique.
 
 1. First, find an object in your surroundings, it can be any object you want.
 
-2. Now you&apos;re going to describe that object in as much detail as possible. Only think about your object and nothing else. As you describe your object try and breathe at a normal pace. 
+2. Now you&apos;re going to describe that object in as much detail as possible. Only think about your object and nothing else. As you describe your object try and breathe at a normal pace.
 
-3. Start by describing your object visually. What color is it, is it one color of multicolored? How does light reflect off the object, is it shiny or non-reflective? Does it cast a shadow? Is it solid or does light shine though it? Is it smaller than you or larger than you? 
+3. Start by describing your object visually. What color is it, is it one color of multicolored? How does light reflect off the object, is it shiny or non-reflective? Does it cast a shadow? Is it solid or does light shine though it? Is it smaller than you or larger than you?
 
 4. Now think about what it would be like to touch your object. What texture does it have, is it smooth or rough? What material is it, would it be hard or soft to touch? What&apos;s its temperature, would it be warm or cold to touch? If you tapped on your object would it make a sound?</techniqueScript>
         <rdfs:label>T2</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/R9WJ8ws6t5B8TkIrKz3pFlL -->
@@ -363,11 +363,11 @@ It is now time to leave this meditation. When you feel ready, gently bring your 
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</techiqueLevelOfAnxiety>
         <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Counting coins</techniqueName>
-        <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find loose change in your pocket. Add a dime to a nickel, then add 
+        <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Find loose change in your pocket. Add a dime to a nickel, then add
 two pennies and so on.</techniqueScript>
         <rdfs:label>T9</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/RBQVFjh6i3IvpAHGd6MSiPn -->
@@ -379,11 +379,11 @@ two pennies and so on.</techniqueScript>
         <preferenceToInteractiveActivity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</preferenceToInteractiveActivity>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ocean Sounds</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ocean sounds</techniqueName>
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You can listen to some relaxing ocean sounds which will take you out of your environment and help you feel less anxious.</techniqueScript>
         <rdfs:label>T5</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/RBYhHrZgWCGfXACQFOGC9uT -->
@@ -395,11 +395,11 @@ two pennies and so on.</techniqueScript>
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Counting backwards</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counting backwards</techniqueName>
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start counting backward from 100 by 3s</techniqueScript>
         <rdfs:label>T8</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/RBmsDgKFxUkL0GsznYkQv0N -->
@@ -411,11 +411,11 @@ two pennies and so on.</techniqueScript>
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploring environment</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exploring environment</techniqueName>
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tune yourself into 4 things around you that you can see, 3 things you can touch, 2 that you smell and 1 you can taste.</techniqueScript>
         <rdfs:label>T10</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://webprotege.stanford.edu/RtVw2qJGXqjDlUBHrzAI03 -->
@@ -427,11 +427,11 @@ two pennies and so on.</techniqueScript>
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ambient Music</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ambient music</techniqueName>
         <techniqueScript rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You can listen to some relaxing ambient music to help you feel less anxious.</techniqueScript>
         <rdfs:label>T4</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#R1 -->
@@ -440,7 +440,7 @@ two pennies and so on.</techniqueScript>
         <rdf:type rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#Rating"/>
         <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</ratingValue>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#S1 -->
@@ -454,7 +454,7 @@ two pennies and so on.</techniqueScript>
         <sessionLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</sessionLevelOfAnxiety>
         <sessionPublicEnvironment rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</sessionPublicEnvironment>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#T1 -->
@@ -467,7 +467,7 @@ two pennies and so on.</techniqueScript>
         <physicalActivityInvolved rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</physicalActivityInvolved>
         <suitableForPublicEnv rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</suitableForPublicEnv>
         <techiqueLevelOfAnxiety rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</techiqueLevelOfAnxiety>
-        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belly breathing</techniqueName>
+        <techniqueName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belly breathing</techniqueName>
         <techniqueScript>1. Place one hand just above your belt line, and the other on your chest, right over the breastbone. You can use your hands as a simple biofeedback device. Your hands will tell you what part of your body, and what muscles, you are using to breathe.
 
 2. Open your mouth and gently sigh, as if someone had just told you something really annoying. As you do, let your shoulders and the muscles of your upper body relax, down, with the exhale. The point of the sigh is not to completely empty your lungs. It&apos;s just to relax the muscles of your upper body.
@@ -484,7 +484,7 @@ two pennies and so on.</techniqueScript>
 
 8. Continue with Steps 4-7.</techniqueScript>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#US1 -->
@@ -495,10 +495,10 @@ two pennies and so on.</techniqueScript>
         <initiated rdf:resource="http://www.semanticweb.org/annasharkova/ontologies/2018/11/untitled-ontology-4#S1"/>
         <userName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane</userName>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -520,4 +520,3 @@ two pennies and so on.</techniqueScript>
 
 
 <!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
-
