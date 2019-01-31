@@ -16,7 +16,7 @@ import _thread
 import json
 import random
 
-itsSuitableForPublic = False
+itsSuitableForPublic = True
 phyisical = False
 
 class DialogManager(StateMachine):
@@ -104,8 +104,9 @@ class DialogManager(StateMachine):
         speak(typeOfMessage = 'askingForSolving')
         onto_searched = onto.search(techniqueName ="*")            
         for i in range(len(onto_searched)):
-            print(onto_searched[i].physicalActivityInvolved[0], onto_searched[i].suitableForPublicEnv[0])
-            if onto_searched[i].physicalActivityInvolved[0] == phyisical and onto_searched[i].suitableForPublicEnv[0] == itsSuitableForPublic :                
+           
+            if onto_searched[i].physicalActivityInvolved[0] == (phyisical) and onto_searched[i].suitableForPublicEnv[0] == (itsSuitableForPublic) :
+                print(onto_searched[i].physicalActivityInvolved[0] == (phyisical), onto_searched[i].suitableForPublicEnv[0] == (itsSuitableForPublic))
                 speakResult(onto_searched[i].techniqueName[0],onto_searched[i].techniqueName[0])
         speakResult("   Was it helpful?", "helpful")
             
@@ -117,6 +118,7 @@ dm = DialogManager()
 data = dataInitialization()
 recognizer = SpeechToText()
 onto = get_ontology("resources/root-ontology.owl").load()
+
 
 def speech_thread (recognizer):    
     while recognizer.iterate == 1:        
